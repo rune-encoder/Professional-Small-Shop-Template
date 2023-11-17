@@ -10,6 +10,9 @@ import Contact from "./pages/Contact.jsx";
 import Product from "./pages/Product.jsx";
 
 import "./styles/index.css";
+import "./styles/Header.css";
+import "./styles/Home.css";
+import "./styles/Footer.css";
 
 const router = createBrowserRouter([
   {

@@ -65,45 +65,45 @@ export default function Carousel() {
             />
           );
         })}
+      </div>
 
-        <div className="carousel-buttons">
-          <button
-            className="button-arrow"
-            onClick={() => {
-              updateIndex(activeIndex - 1);
-            }}
-          >
-            <IoIosArrowDropleft />
-          </button>
+      <div className="carousel-buttons">
+        <button
+          className="button-arrow"
+          onClick={() => {
+            updateIndex(activeIndex - 1);
+          }}
+        >
+          <IoIosArrowDropleft />
+        </button>
 
-          <div className="indicators">
-            {data.map((item, index) => {
-              return (
-                <button
-                  key={item.id}
-                  onClick={() => {
-                    updateIndex(index);
-                  }}
-                >
-                  {activeIndex === index ? (
-                    <IoIosRadioButtonOn />
-                  ) : (
-                    <IoIosRadioButtonOff />
-                  )}
-                </button>
-              );
-            })}
-          </div>
-
-          <button
-            className="button-arrow"
-            onClick={() => {
-              updateIndex(activeIndex + 1);
-            }}
-          >
-            <IoIosArrowDropright />
-          </button>
+        <div className="indicators">
+          {data.map((item, index) => {
+            return (
+              <button
+                key={item.id}
+                onClick={() => {
+                  updateIndex(index);
+                }}
+              >
+                {activeIndex === index ? (
+                  <IoIosRadioButtonOn />
+                ) : (
+                  <IoIosRadioButtonOff />
+                )}
+              </button>
+            );
+          })}
         </div>
+
+        <button
+          className="button-arrow"
+          onClick={() => {
+            updateIndex(activeIndex + 1);
+          }}
+        >
+          <IoIosArrowDropright />
+        </button>
       </div>
     </div>
   );

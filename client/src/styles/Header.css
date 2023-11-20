@@ -1,0 +1,50 @@
+header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  /*!Revisit */
+  background-color: var(--dark);
+}
+
+.logo {
+  padding: 12px;
+}
+
+.nav-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav a {
+  padding: 10px 8px;
+
+  /* ! Revisit */
+  font-family: "Exo 2", sans-serif;
+  font-variant: small-caps;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.search-icon {
+  margin: 0 1em;
+  font-size: 1.2em;
+}
+
+.cart-icon {
+  margin: 0 0.5em;
+  font-size: 1.7em;
+}

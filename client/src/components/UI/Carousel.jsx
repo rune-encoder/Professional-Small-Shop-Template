@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { useRef } from "react";
 
 import sample1 from "../../assets/samples/sample1.png";
 import sample2 from "../../assets/samples/sample2.png";

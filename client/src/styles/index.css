@@ -78,7 +78,7 @@
   --theme: #618adf;
 
   --text: #a61e4d;
-  --accent: #00bfff;
+  --accent: #025dd4;
   --link: #007acc;
   /* --selection: #add8e6; */
 
@@ -111,7 +111,7 @@
 
 .frost {
   /* From https://css.glass */
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--opacity-medium);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.08);

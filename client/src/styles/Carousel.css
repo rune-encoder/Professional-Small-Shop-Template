@@ -42,7 +42,7 @@
 
   text-align: center;
 
-  color: var(--always-light);
+  color: var(--light);
 }
 
 /* CAROUSEL BUTTON CONTROLLERS */
@@ -58,10 +58,29 @@
   font-size: 1.5em;
 }
 
+.button-arrow svg {
+  transition: all 0.2s ease-in;
+}
+
 .indicators {
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin-top: 5px;
   font-size: 1.2em;
+}
+
+.indicators svg {
+  transition: all 0.2s ease-in;
+}
+
+/* ON HOVER: CAROUSEL BUTTONS */
+.button-arrow svg:hover {
+  color: var(--accent);
+  transform: scale(0.95);
+}
+
+.indicators svg:hover {
+  color: var(--accent);
+  transform: scale(0.95);
 }

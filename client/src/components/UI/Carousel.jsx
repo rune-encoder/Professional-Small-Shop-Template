@@ -40,6 +40,18 @@ export default function Carousel() {
 
   const [activeIndex, setActiveIndex] = useState(0);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (activeIndex === data.length - 1) {
+        updateIndex(0);
+        return;
+      }
+
+      updateIndex(activeIndex + 1);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [activeIndex]);
+
   const updateIndex = (newIndex) => {
     if (newIndex < 0) {
       newIndex = 0;
@@ -55,7 +67,7 @@ export default function Carousel() {
         className="carousel-wrapper"
         style={{ transform: `translateX(-${activeIndex * 100}%)` }}
       >
-        {data.map((item, index) => {
+        {data.map((item) => {
           return (
             <CarouselItem
               key={item.id}

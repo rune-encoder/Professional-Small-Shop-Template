@@ -1,4 +1,8 @@
+import Carousel from "../components/UI/Carousel";
 
 export default function Home(props) {
-    return (<div>Home.jsx</div>)
+    return (<>
+    <Carousel />
+    <div>Home.jsx</div>
+    </>)
 }

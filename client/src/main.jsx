@@ -12,6 +12,8 @@ import Cart from "./pages/Cart.jsx";
 
 import "./styles/index.css";
 import "./styles/Header.css";
+// import "./styles/Featured.css";
+import "./styles/Carousel.css";
 import "./styles/Home.css";
 import "./styles/Footer.css";
 

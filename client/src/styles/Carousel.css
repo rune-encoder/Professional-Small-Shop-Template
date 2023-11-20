@@ -1,0 +1,76 @@
+.carousel-container {
+    overflow: hidden;
+    width: 780px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.carousel-wrapper {
+    white-space: nowrap;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.carousel-item{
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 15em;
+
+    /* ! Revisit */
+    background-color: var(--light);
+}
+
+.carousel-img {
+    /* width: 100%; */
+    /* padding: 0 20px 0 20px */
+}
+
+.carousel-text {
+    position: relative;
+    top: -50px;
+    right: -50px;
+
+    margin: 40px 0 40px 0;
+    padding: 0 20px 0 20px;
+    white-space: normal;
+    color: #44632b;
+}
+
+.carousel-buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.button-arrow {
+    /* background: none;
+    border: none;
+    cursor: pointer; */
+    margin-top:20px
+}
+
+.indicators {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.indicator-buttons {
+    border: none;
+    cursor: pointer;
+}
+
+.indicator > button {
+    margin: 5px;
+    background: none;
+}
+
+.indicator-symbol {
+    color: #b61414;
+}
+
+.indicator-symbol-active {
+    color: #44632b;
+}

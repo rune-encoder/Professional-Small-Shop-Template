@@ -5,7 +5,7 @@ export default function Header(props) {
   return (
     <>
       <header>
-        <Link to="/" className="logo bd">
+        <Link to="/" className="logo">
           <img src={logo} alt="Small Shop Logo" />
         </Link>
         {props.children}

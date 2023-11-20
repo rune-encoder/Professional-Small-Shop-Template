@@ -2,12 +2,6 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities"; */
 
-/* ! TEST DELETE ========================================= */
-.bd {
-  border: 1px solid rgb(39, 194, 25);
-}
-/* ! TEST DELETE ========================================= */
-
 * {
   margin: 0;
   padding: 0;
@@ -21,7 +15,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  /* font-synthesis: none; */
 
   /* COLORS STAY THE SAME ACROSS THEMES (DARK AND LIGHT MODE) */
   --always-light: #ffffff;
@@ -54,7 +47,7 @@
   /* !Revisit */
   /* UNIQUE THEME COLOR STYLE (WHEN LIGHT MODE) */
   --unique: #d608ff;
-  --theme:  #007acc ;
+  --theme: #007acc;
 
   --text: #61afef;
   --accent: #56b6c2;
@@ -98,6 +91,7 @@
   --btn-right: #9d9175; */
 }
 
+/* =================== UTILITIES =================== */
 /* ACTIVE NAV LINK */
 .active {
   cursor: not-allowed;
@@ -115,17 +109,28 @@
   opacity: 0.3;
 }
 
-/* ! Revisit */
-button, input[type="submit"], input[type="reset"] {
-	background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
+.frost {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+/* ! Revisit */
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+/* =================== DEFAULT STYLES =================== */
 /* REMOVE LINK UNDERLINE */
 a {
   text-decoration: none;
@@ -164,8 +169,7 @@ p {
   filter: drop-shadow(5px 3px 10px var(--opacity-medium));
 }
 
-
-/* =========================== Media Queries ============= */
+/* =================== Media Queries =================== */
 /* Laptops */
 @media screen and (max-width: 1024px) {
 }

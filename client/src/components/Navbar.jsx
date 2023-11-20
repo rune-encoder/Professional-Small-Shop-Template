@@ -23,7 +23,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="nav-group bd">
+    <div className="nav-group">
       <nav>
         <NavLinks
           links={links.map((link) => (

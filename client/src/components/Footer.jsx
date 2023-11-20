@@ -1,4 +1,8 @@
 
 export default function Footer(props) {
-    return <div>Footer.jsx</div>
+    return (
+        <footer>
+            <div>Footer.jsx</div>
+            {props.children}
+        </footer>)
 }

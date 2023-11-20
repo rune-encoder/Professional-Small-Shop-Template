@@ -1,8 +1,15 @@
+import { Link } from "react-router-dom";
+import logo from "../assets/logo.svg";
+
 export default function Header(props) {
   return (
-    <header>
-      <div>Header.jsx</div>
-      {props.children}
-    </header>
+    <>
+      <header>
+        <Link to="/" className="logo bd">
+          <img src={logo} alt="Small Shop Logo" />
+        </Link>
+        {props.children}
+      </header>
+    </>
   );
 }

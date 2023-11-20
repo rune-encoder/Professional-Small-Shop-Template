@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ThemeBtn from "./components/UI/ThemeBtn";
+import Navbar from "./components/Navbar";
 
 function App() {
   // Check if user prefers dark mode in their Operating System and set the theme accordingly.
@@ -42,10 +43,12 @@ function App() {
   return (
     <>
       <Header>
-        <ThemeBtn darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+        <Navbar />
       </Header>
       <Outlet />
-      <Footer />
+      <Footer>
+        <ThemeBtn darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      </Footer>
     </>
   );
 }

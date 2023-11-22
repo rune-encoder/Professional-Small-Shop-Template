@@ -1,9 +1,6 @@
 import { useState, useEffect } from "react";
 
-import sample1 from "../../assets/samples/sample1.png";
-import sample2 from "../../assets/samples/sample2.png";
-import sample3 from "../../assets/samples/sample3.png";
-import sample4 from "../../assets/samples/sample4.png";
+import carouselContent from "../../content/carouselContent";
 
 import CarouselItem from "./CarouselItem";
 import {
@@ -14,34 +11,12 @@ import {
 } from "react-icons/io";
 
 export default function Carousel() {
-  const data = [
-    {
-      id: 1,
-      item: "Item 1: Short Description of Item 1",
-      img: sample1,
-    },
-    {
-      id: 2,
-      item: "Item 2: Short Description of Item 2",
-      img: sample2,
-    },
-    {
-      id: 3,
-      item: "Item 3: Short Description of Item 3",
-      img: sample3,
-    },
-    {
-      id: 4,
-      item: "Item 4: Short Description of Item 4",
-      img: sample4,
-    },
-  ];
 
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (activeIndex === data.length - 1) {
+      if (activeIndex === carouselContent.length - 1) {
         updateIndex(0);
         return;
       }
@@ -54,8 +29,8 @@ export default function Carousel() {
   const updateIndex = (newIndex) => {
     if (newIndex < 0) {
       newIndex = 0;
-    } else if (newIndex >= data.length) {
-      newIndex = data.length - 1;
+    } else if (newIndex >= carouselContent.length) {
+      newIndex = carouselContent.length - 1;
     }
     setActiveIndex(newIndex);
   };
@@ -66,7 +41,7 @@ export default function Carousel() {
         className="carousel-wrapper"
         style={{ transform: `translateX(-${activeIndex * 100}%)` }}
       >
-        {data.map((item) => {
+        {carouselContent.map((item) => {
           return (
             <CarouselItem
               key={item.id}
@@ -89,7 +64,7 @@ export default function Carousel() {
         </button>
 
         <div className="indicators">
-          {data.map((item, index) => {
+          {carouselContent.map((item, index) => {
             return (
               <button
                 key={item.id}

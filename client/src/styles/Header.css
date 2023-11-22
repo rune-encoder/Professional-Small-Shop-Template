@@ -1,3 +1,4 @@
+/* HEADER CONTAINER AND CONTENT WITHIN */
 header {
   display: flex;
   flex-direction: row;
@@ -6,14 +7,19 @@ header {
   justify-content: space-between;
   width: 100%;
 
-  /*!Revisit */
-  background-color: var(--dark);
+  /*!BACKGROUND COLOR */
+  background-color: var(--medium-dark);
 }
 
-.logo {
+/* LEFT ON HEADER: LOGO SECTION*/
+.logo h1 {
   padding: 12px;
+  font-weight: normal;
+  font-size: 2em;
+  /* color: var(--theme); */
 }
 
+/* RIGHT ON HEADER: NAV SECTION*/
 .nav-group {
   display: flex;
   flex-direction: row;
@@ -22,6 +28,7 @@ header {
   padding: 12px;
 }
 
+/* NAV CONTAINER FOR LINKS (NOT CART AND SEARCH)*/
 nav {
   display: flex;
   flex-direction: row;
@@ -29,22 +36,79 @@ nav {
   justify-content: space-between;
 }
 
+/* INDIVIDUAL NAV LINKS */
 nav a {
   padding: 10px 8px;
 
   /* ! Revisit */
   font-family: "Exo 2", sans-serif;
   font-variant: small-caps;
+  font-weight: bold;
 
   transition: all 0.3s ease-in-out;
 }
 
-.search-icon {
-  margin: 0 1em;
-  font-size: 1.2em;
+/* NAV CONTAINER FOR UTILS: SEARCH, CART, HAMBURGER */
+.nav-utils {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 10px;
 }
 
+/* SEARCH ICON */
+.search-icon {
+  font-size: 1.2em;
+  padding: 0 5px;
+}
+
+/* CART ICON */
 .cart-icon {
-  margin: 0 0.5em;
+  margin-top: 5px;
   font-size: 1.7em;
+  padding: 0 5px;
+}
+
+/* PHONE HAMBURGER ICON */
+.sliding-menu-icon {
+  display: none;
+  cursor: not-allowed;
+  pointer-events: none;
+  font-size: 1.4em;
+  padding: 0 5px;
+}
+
+/* PHONE HAMBURGER CONTENT */
+.sliding-menu-content {
+  display: none;
+}
+
+/* Laptops */
+@media screen and (max-width: 1024px) {
+}
+
+/* Tablets */
+@media screen and (max-width: 992px) {
+}
+
+/* Large smartphones */
+@media screen and (max-width: 768px) {
+
+  nav {
+    display: none;
+  }
+
+  .sliding-menu-icon {
+    display: inline;
+    cursor: pointer;
+    pointer-events: auto;
+  }
+
+  .sliding-menu-content {
+    display: flex;
+  }
+}
+
+/* Small smartphones */
+@media screen and (max-width: 576px) {
 }

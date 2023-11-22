@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -12,7 +12,7 @@
   transition: transform 1s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
-/* INDIVIDUAL ITEM CONTEN WITHIN CAROUSEL*/
+/* INDIVIDUAL ITEM GROUP WITHIN CAROUSEL*/
 .carousel-item {
   position: relative;
   display: inline-flex;
@@ -77,10 +77,19 @@
 /* ON HOVER: CAROUSEL BUTTONS */
 .button-arrow svg:hover {
   color: var(--accent);
-  transform: scale(0.95);
+  transition: all 0.1s ease-out;
 }
 
 .indicators svg:hover {
   color: var(--accent);
+  transition: all 0.1s ease-out;
+}
+
+/* ON CLICK: CAROUSEL BUTTONS */
+.button-arrow svg:active {
+  transform: scale(0.95);
+}
+
+.indicators svg:active {
   transform: scale(0.95);
 }

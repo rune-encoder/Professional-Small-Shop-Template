@@ -3,6 +3,7 @@ import NavLinks from "./UI/NavLinks";
 
 import { BsSearch } from "react-icons/bs";
 import { LiaShoppingCartSolid } from "react-icons/lia";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 export default function Navbar() {
   const location = useLocation();
@@ -23,24 +24,25 @@ export default function Navbar() {
   };
 
   return (
-    <div className="nav-group">
-      <nav>
-        <NavLinks
-          links={links.map((link) => (
-            <Link
-              key={link.id}
-              to={link.path}
-              className={isLinkDisabled(link) ? "active" : ""}
-            >
-              {link.text}
-            </Link>
-          ))}
-        />
-      </nav>
-      <BsSearch className="search-icon" />
-      <Link to="/Cart" className={isLinkDisabled("/Cart") ? "active" : ""}>
-        <LiaShoppingCartSolid className="cart-icon" />
-      </Link>
-    </div>
+    <>
+      <div className="nav-group">
+        <nav>
+          <NavLinks links={links} isLinkDisabled={isLinkDisabled} />
+        </nav>
+        <div className="nav-utils">
+          <BsSearch className="search-icon" />
+          <Link
+            to="/Cart"
+            className={isLinkDisabled({ path: "/Cart" }) ? "active" : ""}
+          >
+            <LiaShoppingCartSolid className="cart-icon" />
+          </Link>
+          <RxHamburgerMenu className="sliding-menu-icon" />
+        </div>
+      </div>
+      <aside className="sliding-menu-content">
+        <NavLinks links={links} isLinkDisabled={isLinkDisabled} />
+      </aside>
+    </>
   );
 }

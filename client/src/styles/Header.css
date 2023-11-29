@@ -69,7 +69,7 @@ nav a {
   padding: 0 5px;
 }
 
-/* PHONE HAMBURGER ICON */
+/* PHONE SLIDING MENU ICON */
 .sliding-menu-icon {
   display: none;
   cursor: not-allowed;
@@ -78,18 +78,19 @@ nav a {
   padding: 0 5px;
 }
 
-/* PHONE HAMBURGER CONTENT */
+/* PHONE SLIDING MENU CONTENT */
 .sliding-menu-content {
   display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  background-color: red;
 }
 
-/* Laptops */
-@media screen and (max-width: 1024px) {
-}
-
-/* Tablets */
-@media screen and (max-width: 992px) {
-}
+/* =================== Media Queries =================== */
 
 /* Large smartphones */
 @media screen and (max-width: 768px) {
@@ -104,11 +105,11 @@ nav a {
     pointer-events: auto;
   }
 
-  .sliding-menu-content {
+  .sliding-menu-open {
     display: flex;
   }
 }
 
-/* Small smartphones */
-@media screen and (max-width: 576px) {
-}
+/* ! Small smartphones */
+/* @media screen and (max-width: 576px) {
+} */

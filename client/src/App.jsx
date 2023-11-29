@@ -42,9 +42,7 @@ function App() {
 
   return (
     <>
-      <Header>
-        <Navbar />
-      </Header>
+      <Header />
       <Outlet />
       <Footer>
         <ThemeBtn darkMode={darkMode} toggleDarkMode={toggleDarkMode} />

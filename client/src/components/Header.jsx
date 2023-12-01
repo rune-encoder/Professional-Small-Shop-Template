@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import Navbar from "./Navbar";
-import NavLinks from "./UI/NavLinks";
+import Navbar from "./Header/Navbar";
+import NavLinks from "./Header/NavLinks";
 
 export default function Header(props) {
   const location = useLocation();

@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import NavLinks from "./UI/NavLinks";
+import NavLinks from "./NavLinks";
 
 import { BsSearch } from "react-icons/bs";
 import { LiaShoppingCartSolid } from "react-icons/lia";

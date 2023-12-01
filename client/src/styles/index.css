@@ -107,12 +107,24 @@
   opacity: 0.3;
 }
 
+/* GLASS EFFECT */
 .frost {
   /* From https://css.glass */
   background: var(--opacity-medium);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* FLEX-GRID LAYOUT */
+.flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.col {
+  box-sizing: border-box;
 }
 
 /* ! Revisit */
@@ -132,7 +144,7 @@ input[type="reset"] {
 /* REMOVE LINK UNDERLINE */
 a {
   text-decoration: none;
-  color: var(--link)
+  color: var(--link);
 }
 
 /* DEFAULT HEADER SIZES */
@@ -170,28 +182,28 @@ p {
 
 /* =================== Media Queries =================== */
 /* Laptops */
-@media screen and (max-width: 1024px) {
-  h1{
+/* @media screen and (max-width: 1024px) {
+  header h1{
     color: green;
   }
-}
+} */
 
 /* Tablets */
-@media screen and (max-width: 992px) {
-  h1{
+/* @media screen and (max-width: 992px) {
+  header h1{
     color: rgb(226, 205, 17);
   }
-}
+} */
 /* Large smartphones */
-@media screen and (max-width: 768px) {
-  h1{
+/* @media screen and (max-width: 768px) {
+  header h1{
     color: rgb(218, 18, 184);
   }
-}
+} */
 
 /* Small smartphones */
-@media screen and (max-width: 576px) {
-  h1{
+/* @media screen and (max-width: 576px) {
+  header h1{
     color: rgb(21, 186, 207);
   }
-}
+} */

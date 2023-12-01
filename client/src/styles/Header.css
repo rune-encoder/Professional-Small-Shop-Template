@@ -2,7 +2,6 @@
 header {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   width: 100%;
@@ -90,6 +89,7 @@ nav a {
   background-color: var(--opacity-medium);
 }
 
+/* PHONE SLIDING MENU NAV LINKS */
 .sliding-menu-content > a {
   font-family: "Exo 2", sans-serif;
   font-variant: small-caps;
@@ -103,21 +103,29 @@ nav a {
 /* Large smartphones */
 @media screen and (max-width: 768px) {
 
+  /* HIDE MAIN NAV LINKS */
   nav {
     display: none;
   }
 
+  /* DISPLAY MOBILE NAV ICON */
   .sliding-menu-icon {
     display: inline;
     cursor: pointer;
+    user-select: none;
     pointer-events: auto;
   }
 
+  /* SHOW SLIDING MENU NAV LINKS */
   .sliding-menu-open {
     display: flex;
   }
 }
 
 /* ! Small smartphones */
-/* @media screen and (max-width: 576px) {
-} */
+@media screen and (max-width: 576px) {
+  /* MAKE LOGO SMALLER */
+  .logo h1 {
+    font-size: 1.5em;
+  }
+}

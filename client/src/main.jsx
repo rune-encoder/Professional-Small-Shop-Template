@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+// |========== IMPORT MAIN COMPONENTS: PAGES ==========|
 import App from "./App.jsx";
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
@@ -10,11 +11,19 @@ import Contact from "./pages/Contact.jsx";
 import Product from "./pages/Product.jsx";
 import Cart from "./pages/Cart.jsx";
 
+// |========== IMPORT CSS STYLES ==========|
+// <===== MAIN GLOBAL STYLE =====>
 import "./styles/index.css";
-import "./styles/Header.css";
-import "./styles/Carousel.css";
+
+// <===== PAGES STYLES =====>
 import "./styles/Home.css";
+
+// <===== COMPOENT GROUP STYLES =====>
+import "./styles/Header.css";
 import "./styles/Footer.css";
+
+// <===== UTILITIES STYLES =====>
+import "./styles/Carousel.css";
 
 const router = createBrowserRouter([
   {

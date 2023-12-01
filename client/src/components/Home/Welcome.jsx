@@ -1,7 +1,7 @@
 export default function Welcome() {
   return (
-    <>
-      <div className="welcome">
+      <div className="welcome-container">
+        <span>Updates</span>
         <div className="welcome-text">
           <h3 className="">
             Small Shop Template inspired by the need for small shops to have
@@ -11,6 +11,5 @@ export default function Welcome() {
           <h3 className="">We have the best products.. i mean.. templates for you</h3>
         </div>
       </div>
-    </>
   );
 }

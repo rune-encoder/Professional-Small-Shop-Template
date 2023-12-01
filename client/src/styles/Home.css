@@ -1,11 +1,12 @@
-/* !Revisit =========V */
-.welcome {
+/* !Revisit =========================V */
+.welcome-container {
   margin: 10px 0px;
   background-color: var(--dark);
 }
 
 .welcome-text {
   text-align: center;
+  font-family: 'Ysabeau', sans-serif;
 }
 
 .welcome-text h3 {
@@ -19,9 +20,10 @@
   background-color: var(--dark);
 }
 
+.welcome-container span,
 .category-outer-container span {
 
-  font-family: "Exo 2", sans-serif;
+  font-family: 'Ysabeau SC', sans-serif;
   font-variant: small-caps;
 
   font-size: 8rem;
@@ -34,7 +36,7 @@
   color: var(--medium-dark);
 }
 
-/* !Revisit =========^ */
+/* !Revisit =========================^ */
 
 /* SHOP CATEGORIES CONTAINER */
 .category-container {
@@ -48,7 +50,7 @@
 
   text-align: center;
 
-  /* background-color: var(--medium-dark); */
+  background-color: var(--medium-dark);
   border: 1px solid var(--opacity-medium);
   border-radius: 5px;
 

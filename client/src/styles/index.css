@@ -1,7 +1,4 @@
-/*! @import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities"; */
-
+@import url('https://fonts.googleapis.com/css2?family=Exo&family=Exo+2&family=Roboto&family=Ysabeau&family=Ysabeau+Infant&family=Ysabeau+Office&family=Ysabeau+SC&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -207,3 +204,11 @@ p {
     color: rgb(21, 186, 207);
   }
 } */
+
+/* font-family: 'Exo', sans-serif;
+font-family: 'Exo 2', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Ysabeau', sans-serif;
+font-family: 'Ysabeau Infant', sans-serif;
+font-family: 'Ysabeau Office', sans-serif;
+font-family: 'Ysabeau SC', sans-serif; */

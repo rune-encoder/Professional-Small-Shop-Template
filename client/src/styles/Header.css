@@ -2,7 +2,6 @@
 header {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   width: 100%;
@@ -69,7 +68,7 @@ nav a {
   padding: 0 5px;
 }
 
-/* PHONE HAMBURGER ICON */
+/* PHONE SLIDING MENU ICON */
 .sliding-menu-icon {
   display: none;
   cursor: not-allowed;
@@ -78,37 +77,55 @@ nav a {
   padding: 0 5px;
 }
 
-/* PHONE HAMBURGER CONTENT */
+/* PHONE SLIDING MENU CONTENT */
 .sliding-menu-content {
   display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  background-color: var(--opacity-medium);
 }
 
-/* Laptops */
-@media screen and (max-width: 1024px) {
+/* PHONE SLIDING MENU NAV LINKS */
+.sliding-menu-content > a {
+  font-family: "Exo 2", sans-serif;
+  font-variant: small-caps;
+  font-weight: bold;
+
+  transition: all 0.3s ease-in-out;
 }
 
-/* Tablets */
-@media screen and (max-width: 992px) {
-}
+/* =================== Media Queries =================== */
 
 /* Large smartphones */
 @media screen and (max-width: 768px) {
 
+  /* HIDE MAIN NAV LINKS */
   nav {
     display: none;
   }
 
+  /* DISPLAY MOBILE NAV ICON */
   .sliding-menu-icon {
     display: inline;
     cursor: pointer;
+    user-select: none;
     pointer-events: auto;
   }
 
-  .sliding-menu-content {
+  /* SHOW SLIDING MENU NAV LINKS */
+  .sliding-menu-open {
     display: flex;
   }
 }
 
-/* Small smartphones */
+/* ! Small smartphones */
 @media screen and (max-width: 576px) {
+  /* MAKE LOGO SMALLER */
+  .logo h1 {
+    font-size: 1.5em;
+  }
 }
